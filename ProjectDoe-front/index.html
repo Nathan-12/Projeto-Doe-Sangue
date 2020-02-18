@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <img class="logo" src="logo.png" alt="Imagem com a palavra DOE">
+        <img class="logo" src="/logo.png" alt="Imagem com a palavra DOE">
         <h2>A sua doação importa</h2>
         <p>Até 3 vidas com 1 doação</p>
         <p>Mais de 38.000 doações são necessárias todos os dias</p>
@@ -34,25 +34,23 @@
         <h2>Últimos <span>doadores</span></h2>
 
         <section class="donors">
+
+            {% for donor in donors %}
+
             <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Diego Fernandes</p>
+                <div class="blood">{{ donor.blood }}</div>
+                <p>{{ donor.name}}</p>
             </div>
-            <div class="donor">
-                <div class="blood">O+</div>
-                <p>Nathan Lima</p>
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Maria de Fátima</p>
-            </div>
+
+            {%endfor%}
+           
         </section>
     </main>
 
     <footer>Desenvolvido por Nathan Lima ❤</footer>
 
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 
 
 </body>
